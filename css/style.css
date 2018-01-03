@@ -1,1 +1,9 @@
-
+h1{
+    text-align: center;
+}
+input{
+    margin-left: 400px ;
+}
+button{
+    margin-left: 10px ;
+}
