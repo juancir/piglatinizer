@@ -7,11 +7,15 @@
 // Document Ready Function. All of your jQuery should go in here. 
 $( document ).ready(function() {
   
-
-
-
 });
-
+	function turnToPig (){
+		var userInput = $("input").val().toLowerCase();
+		console.log(userInput);
+  			userInput.split();
+  			$('button').click(function() {
+  				turnToPig();
+  			});
+  }
 
 // Create the wordToPigLatin function that takes a word as a parameter and returns a transfromed word. 
 
