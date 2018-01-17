@@ -11,7 +11,7 @@ $(document).ready(function() {
 function turnToPig (){
 	var str = $("input").val();
   	var words= str.split(" ");
-  	console.log(words);
+  	$("#newSentence").text(string);
 }
 
 // Create the wordToPigLatin function that takes a word as a parameter and returns a transfromed word. 
