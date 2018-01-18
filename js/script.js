@@ -5,14 +5,15 @@
 // CREATE THE FUNCTIONS BELOW
 
 // Document Ready Function. All of your jQuery should go in here. 
-$(document).ready(function() {
+// $(document).ready(function() {
   
-});
+// });
 function turnToPig (){
 	var str = $("input").val();
-  	var words= str.split(" ");
-  	$("#newSentence").text(string);
+  	var words= str.slice(" ");
+  	console.log(words);
 }
+$("button").click(turnToPig);
 
 // Create the wordToPigLatin function that takes a word as a parameter and returns a transfromed word. 
 
@@ -24,6 +25,3 @@ function turnToPig (){
 // Create the sentenceToPigLatin function that takes a sentence as a parameter
 	//Loops through all the words in the sentence and transforms each word
 	//It should return a transfromed sentance
-
-
-
