@@ -5,15 +5,40 @@
 // CREATE THE FUNCTIONS BELOW
 
 // Document Ready Function. All of your jQuery should go in here. 
-// $(document).ready(function() {
-  
-// });
-function turnToPig (){
-	var str = $("input").val();
-  	var words= str.slice(" ");
-  	console.log(words);
-}
-$("button").click(turnToPig);
+$(document).ready(function() {
+	$("button").click(turnToPig);
+
+	function turnToPig() {
+		var str = $("input").val();
+		var words = str.split(" ");
+		console.log(words);
+		var answers = [];
+		for (var i = 0; i < words.length; i++) {
+			console.log(words[i])
+			answers.push(latinizeWord(words[i]));
+		}
+		$("#newSentence").html(answers.join(" "));
+	}
+
+	function latinizeWord(word) {
+		var vowels = ["a", "e", "i", "o", "u"];
+		var firstLetter = word[0];
+		var indexOf = vowels.indexOf(firstLetter);
+		var beginsWithVowel = indexOf > -1;
+		if (beginsWithVowel) {
+			return word + "yay";
+		}
+		else {
+			return word.slice(1) + firstLetter + "ay";
+		}
+       
+	}
+
+
+
+
+});
+
 
 // Create the wordToPigLatin function that takes a word as a parameter and returns a transfromed word. 
 
